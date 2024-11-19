@@ -5,6 +5,7 @@ import Footer from '@/components/shared/footer';
 import { ProductMore } from '../ProductDetail/component/ProductMore';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 const listLogo = [
   {
     id: 1,
@@ -32,6 +33,8 @@ const listLogo = [
     url: 'https://theme.hstatic.net/200000858039/1001213316/14/season_coll_5_img_large.png?v=344'
   }
 ];
+=======
+>>>>>>> master
 
 export default function ShopPage() {
   return (
@@ -42,6 +45,7 @@ export default function ShopPage() {
         className="relative mx-auto w-[90%] flex-1 overflow-y-auto bg-white p-4"
         pageHead="Trang chủ | G-Local"
       >
+<<<<<<< HEAD
         <div className="grid grid-cols-5 bg-white">
           {listLogo.map((item, index) => (
             <div className="flex flex-col items-center justify-center duration-500 hover:scale-110">
@@ -57,6 +61,8 @@ export default function ShopPage() {
           ))}
         </div>
 
+=======
+>>>>>>> master
         <div className="mt-[5%]">
           <ProductMore />
         </div>

@@ -2,7 +2,11 @@ import ScrollToTop from '@/hooks/scroll-to-top';
 import NotFound from '@/pages/not-found';
 import { Suspense, lazy } from 'react';
 import { Navigate, Outlet, useRoutes } from 'react-router-dom';
+<<<<<<< HEAD
 
+=======
+import ProtectedRoute from './ProtectedRoute';
+>>>>>>> master
 const SystemLayout = lazy(() => import('@/components/layout/layout'));
 const HomePage = lazy(() => import('@/pages/Home/index'));
 const ShopPage = lazy(() => import('@/pages/ShopPage/index'));
@@ -39,6 +43,7 @@ export default function AppRouter() {
         },
         {
           path: '/product/:id',
+<<<<<<< HEAD
           element: <ProductDetail />
         },
         {
@@ -52,6 +57,37 @@ export default function AppRouter() {
         {
           path: '/profile',
           element: <ProfilePage />
+=======
+          element: (
+            <ProtectedRoute>
+              <ProductDetail />
+            </ProtectedRoute>
+          )
+        },
+        {
+          path: '/checkout-pay/:orderId',
+          element: (
+            <ProtectedRoute>
+              <CheckOutPay />
+            </ProtectedRoute>
+          )
+        },
+        {
+          path: '/cart',
+          element: (
+            <ProtectedRoute>
+              <CartPage />
+            </ProtectedRoute>
+          )
+        },
+        {
+          path: '/profile',
+          element: (
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
+          )
+>>>>>>> master
         },
         {
           path: '/login',

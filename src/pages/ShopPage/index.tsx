@@ -46,7 +46,10 @@ export default function ShopPage() {
     if (selectedBrand !== '') {
       handleGetShoesByBrand();
     } else {
+<<<<<<< HEAD
       console.log('zo');
+=======
+>>>>>>> master
       handleGetListShoes(paging);
     }
   }, [selectedBrand]);
@@ -66,6 +69,10 @@ export default function ShopPage() {
       const newPaging = { ...paging, pageNumber: currentPage };
       setPaging(newPaging);
       handleGetListShoes(newPaging);
+<<<<<<< HEAD
+=======
+      // handleGetShoesByBrand();
+>>>>>>> master
     }
   }, [currentPage]);
 
@@ -141,7 +148,28 @@ export default function ShopPage() {
                         BEST QUALITY
                       </p>
                       <div className="">{product.name}</div>
+<<<<<<< HEAD
                       <div className="text-start">{product.price} đ</div>
+=======
+                      <div className="text-start ">
+                        {product.price == '500000' ? (
+                          <div className="">
+                            <span className="">
+                              {' '}
+                              <span className="font-bold text-red">
+                                {' '}
+                                Giá {product.price} đ
+                              </span>
+                              <span className="ml-2 text-gray-600 line-through">
+                                2.500.000 đ
+                              </span>
+                            </span>
+                          </div>
+                        ) : (
+                          <p className="text-red">Giá: {product.price} đ</p>
+                        )}
+                      </div>
+>>>>>>> master
                     </div>
                   ))
                 ) : (

@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import Footer from '@/components/shared/footer';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
+<<<<<<< HEAD
+=======
+import { useDeleteOrder } from '@/queries/cart.query';
+>>>>>>> master
 
 const initialProducts = [
   {
@@ -60,6 +64,7 @@ export default function CartPage() {
   const [productToDelete, setProductToDelete] = useState(null);
   const cart = useSelector((state: RootState) => state.cart.cartDetail);
   const listProduct = cart?.listObjects[0];
+<<<<<<< HEAD
 
   const handleUpdateQuantity = (id, type) => {
     setProducts((prevProducts) =>
@@ -89,6 +94,27 @@ export default function CartPage() {
   const confirmDeleteProduct = (id) => {
     setProductToDelete(id);
     setIsAlertModalOpen(true);
+=======
+  const { mutateAsync: deleteOrder } = useDeleteOrder();
+  console.log(products);
+
+  const handleDeleteProduct = async () => {
+    setProducts((prevProducts) =>
+      prevProducts.filter((product) => product.id !== productToDelete)
+    );
+    const data = await deleteOrder(productToDelete);
+    if (data) {
+      window.location.reload();
+    }
+    setIsAlertModalOpen(false);
+  };
+
+  const confirmDeleteProduct = async (id) => {
+    setProductToDelete(id);
+    setIsAlertModalOpen(true);
+
+    // window.location.reload();
+>>>>>>> master
   };
 
   return (
@@ -158,6 +184,7 @@ export default function CartPage() {
                       </p>
                     </div>
 
+<<<<<<< HEAD
                     {/* Tăng số lượng sản phẩm */}
                     <div className="flex h-[40px] w-[150px] items-center justify-between rounded-md border border-gray-300">
                       <button
@@ -182,6 +209,8 @@ export default function CartPage() {
                     </div>
 
                     {/* Xóa */}
+=======
+>>>>>>> master
                     <div
                       className="cursor-pointer text-yellow"
                       onClick={() => confirmDeleteProduct(product.id)}

@@ -9,6 +9,7 @@ import { useState, useRef, useEffect } from 'react';
 import * as fabric from 'fabric';
 import styled from 'styled-components';
 import IMGShirt from '@/assets/shoes/Product.jpg';
+<<<<<<< HEAD
 
 import AdidasG001 from '@/assets/shoes/AdidasG001.jpg';
 import AdidasG002 from '@/assets/shoes/AdidasG002.jpg';
@@ -26,6 +27,87 @@ import {
   ZoomInIcon,
   ZoomOutIcon
 } from '@/constants/SVGIcon';
+=======
+import { ArrowLeftToLine } from 'lucide-react';
+//9
+// 10;
+// 11;
+// 12;
+// 13;
+// 14;
+// 15;
+// 16;
+// 17;
+// 18;
+// 19;
+// 20;
+// 21;
+// 22;
+// 23;
+// 24;
+
+// 25;
+// 26;
+// 27;
+// 28;
+// 37;
+// 38;
+// 39;
+// 40;
+// 41;
+// 42;
+// 43;
+// 29;
+// 30;
+// 31;
+// 32;
+// 33;
+// 34;
+// 35;
+// 36;
+
+import Shoes9 from '@/assets/shoes/9.jpg';
+import Shoes10 from '@/assets/shoes/10.jpg';
+import Shoes11 from '@/assets/shoes/11.jpg';
+import Shoes12 from '@/assets/shoes/12.jpg';
+import Shoes13 from '@/assets/shoes/13.jpg';
+import Shoes14 from '@/assets/shoes/14.jpg';
+import Shoes15 from '@/assets/shoes/15.jpg';
+import Shoes16 from '@/assets/shoes/16.jpg';
+import Shoes17 from '@/assets/shoes/17.jpg';
+import Shoes18 from '@/assets/shoes/18.jpg';
+import Shoes19 from '@/assets/shoes/19.jpg';
+import Shoes20 from '@/assets/shoes/20.jpg';
+import Shoes21 from '@/assets/shoes/21.jpg';
+import Shoes22 from '@/assets/shoes/22.jpg';
+import Shoes23 from '@/assets/shoes/23.jpg';
+import Shoes24 from '@/assets/shoes/24.jpg';
+
+import Shoes25 from '@/assets/shoes/25.jpg';
+import Shoes26 from '@/assets/shoes/26.jpg';
+import Shoes27 from '@/assets/shoes/27.jpg';
+import Shoes28 from '@/assets/shoes/28.jpg';
+import Shoes29 from '@/assets/shoes/29.jpg';
+import Shoes30 from '@/assets/shoes/30.jpg';
+import Shoes31 from '@/assets/shoes/31.jpg';
+import Shoes32 from '@/assets/shoes/32.jpg';
+import Shoes33 from '@/assets/shoes/33.jpg';
+import Shoes34 from '@/assets/shoes/34.jpg';
+import Shoes35 from '@/assets/shoes/35.jpg';
+import Shoes36 from '@/assets/shoes/36.jpg';
+import Shoes37 from '@/assets/shoes/37.jpg';
+import Shoes38 from '@/assets/shoes/38.jpg';
+import Shoes39 from '@/assets/shoes/39.jpg';
+import Shoes40 from '@/assets/shoes/40.jpg';
+import Shoes41 from '@/assets/shoes/41.jpg';
+import Shoes42 from '@/assets/shoes/42.jpg';
+import Shoes43 from '@/assets/shoes/43.jpg';
+import { useToast } from '@/components/ui/use-toast';
+import { SketchPicker } from 'react-color';
+import { CongCu } from './MenuDetail';
+import { listMenuCustomize } from '@/constants/data';
+
+>>>>>>> master
 import { Input } from '@/components/ui/input';
 import { exportCanvasAsImage } from '@/helpers';
 import { useGetDetailShoes } from '@/queries/shoes.query';
@@ -46,6 +128,7 @@ interface Point {
 }
 
 const listDataIMG = [
+<<<<<<< HEAD
   {
     name: 'Adidas G001',
     image: AdidasG001
@@ -69,6 +152,171 @@ const listDataIMG = [
   {
     name: 'Jordan G003',
     image: JordanG003
+=======
+  // {
+  //   name: 'Adidas G001',
+  //   image: AdidasG001
+  // },
+  // {
+  //   name: 'Adidas G002',
+  //   image: AdidasG002
+  // },
+  // {
+  //   name: 'Adidas G003',
+  //   image: AdidasG003
+  // },
+  // {
+  //   name: 'Jordan G001',
+  //   image: JordanG001
+  // },
+  // {
+  //   name: 'Jordan G002',
+  //   image: JordanG002
+  // },
+  // {
+  //   name: 'Jordan G003',
+  //   image: JordanG003
+  // }
+  {
+    id: 9,
+    image: Shoes9
+  },
+  {
+    id: 10,
+    image: Shoes10
+  },
+  {
+    id: 11,
+    image: Shoes11
+  },
+  {
+    id: 12,
+    image: Shoes12
+  },
+  {
+    id: 13,
+    image: Shoes13
+  },
+  {
+    id: 14,
+    image: Shoes14
+  },
+  {
+    id: 15,
+    image: Shoes15
+  },
+  {
+    id: 16,
+    image: Shoes16
+  },
+  {
+    id: 17,
+    image: Shoes17
+  },
+  {
+    id: 18,
+    image: Shoes18
+  },
+  {
+    id: 19,
+    image: Shoes19
+  },
+  {
+    id: 20,
+    image: Shoes20
+  },
+  {
+    id: 21,
+    image: Shoes21
+  },
+  {
+    id: 22,
+    image: Shoes22
+  },
+  {
+    id: 23,
+    image: Shoes23
+  },
+  {
+    id: 24,
+    image: Shoes24
+  },
+  {
+    id: 25,
+    image: Shoes25
+  },
+  {
+    id: 26,
+    image: Shoes26
+  },
+  {
+    id: 27,
+    image: Shoes27
+  },
+  {
+    id: 28,
+    image: Shoes28
+  },
+  {
+    id: 29,
+    image: Shoes29
+  },
+  {
+    id: 30,
+    image: Shoes30
+  },
+  {
+    id: 31,
+    image: Shoes31
+  },
+  {
+    id: 32,
+    image: Shoes32
+  },
+  {
+    id: 33,
+    image: Shoes33
+  },
+  {
+    id: 34,
+    image: Shoes34
+  },
+  {
+    id: 35,
+    image: Shoes35
+  },
+  {
+    id: 36,
+    image: Shoes36
+  },
+  {
+    id: 37,
+    image: Shoes37
+  },
+  {
+    id: 38,
+    image: Shoes38
+  },
+  {
+    id: 39,
+    image: Shoes39
+  },
+  {
+    id: 40,
+    image: Shoes40
+  },
+  {
+    id: 41,
+    image: Shoes41
+  },
+  {
+    id: 42,
+    image: Shoes42
+  },
+  {
+    id: 43,
+    image: Shoes43
+>>>>>>> master
   }
 ];
 
@@ -90,10 +338,19 @@ export default function CustomizePage() {
   const [openModal, setOpenModal] = useState(false);
   // query
   const { data: dataShoes } = useGetDetailShoes(String(productId));
+<<<<<<< HEAD
 
   useEffect(() => {
     if (dataShoes) {
       const shoes = listDataIMG.find((item) => item.name == dataShoes?.name);
+=======
+  const { toast } = useToast();
+  useEffect(() => {
+    if (dataShoes) {
+      console.log('dataShoes', dataShoes);
+      const shoes = listDataIMG.find((item) => item.id == dataShoes?.id);
+      console.log('shoes nek', shoes);
+>>>>>>> master
       if (shoes) {
         setSelectedImg(shoes.image);
       }
@@ -381,6 +638,17 @@ export default function CustomizePage() {
     }
   };
 
+<<<<<<< HEAD
+=======
+  const handleSuccess = () => {
+    toast({
+      title: 'Đặt hàng thành công',
+      variant: 'success',
+      description: 'Đơn hàng của bạn đã được ghi nhận'
+    });
+  };
+
+>>>>>>> master
   return (
     <div className="flex h-screen w-full">
       {dataShoes && (
@@ -388,6 +656,10 @@ export default function CustomizePage() {
           openModal={openModal}
           setOpenModal={setOpenModal}
           product={dataShoes}
+<<<<<<< HEAD
+=======
+          onSuccess={handleSuccess}
+>>>>>>> master
         />
       )}
       {/* Left Toolbar */}
@@ -422,6 +694,7 @@ export default function CustomizePage() {
             {/* Other toolbar buttons */}
             <Tooltip>
               <TooltipTrigger asChild>
+<<<<<<< HEAD
                 <Button variant="ghost" size="icon">
                   <UndoIcon className="h-5 w-5" />
                   <span className="sr-only">Undo</span>
@@ -457,6 +730,24 @@ export default function CustomizePage() {
               <TooltipContent>Zoom Out</TooltipContent>
             </Tooltip>
             {/* Delete Button */}
+=======
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => {
+                    window.location.href = `/product/${productId}`;
+                  }}
+                >
+                  <ArrowLeftToLine
+                    className="h-5 w-5 stroke-white 
+                  hover:stroke-[#8b3dff]"
+                  />
+                  <span className="sr-only">Back</span>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>Back</TooltipContent>
+            </Tooltip>
+>>>>>>> master
           </TooltipProvider>
         </div>
       </div>
@@ -485,6 +776,7 @@ export default function CustomizePage() {
               </ContainerWrapper>
             </div>
             <div className="flex justify-between">
+<<<<<<< HEAD
               {/* <div className="flex gap-2">
                 <Button
                   variant="outline"
@@ -508,6 +800,8 @@ export default function CustomizePage() {
                   }}
                 ></Button>
               </div> */}
+=======
+>>>>>>> master
               <div className="flex gap-2">
                 <Button variant="outline" onClick={handleExportCanvasAsImage}>
                   Lưu và đặt hàng

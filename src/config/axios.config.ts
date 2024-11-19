@@ -1,7 +1,14 @@
 import axios from 'axios';
 import helpers from '../helpers';
 
+<<<<<<< HEAD
 const baseURL = 'https://localhost:7093/';
+=======
+const baseURL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://tamnguyendev23-001-site1.ntempurl.com/'
+    : 'https://localhost:7093/';
+>>>>>>> master
 const token = helpers.cookie_get('AT');
 const onRequestSuccess = (config: any) => {
   config.headers['Authorization'] = `Bearer ${helpers.cookie_get('AT')}`;

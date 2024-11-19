@@ -15,8 +15,11 @@ import { Textarea } from '@/components/ui/textarea';
 import ComboBoxFilter from '@/components/shared/combo-box-filter';
 import BaseRequest from '@/config/axios.config';
 import { useCreateUpdateOrderCustom } from '@/queries/cart.query';
+<<<<<<< HEAD
 import { useToast } from '@/components/ui/use-toast';
 
+=======
+>>>>>>> master
 const listSize = ['38', '39', '40', '41', '42', '43', '44'];
 
 const listWarranty = [
@@ -51,6 +54,10 @@ interface TypeOrderCustomize {
   openModal: boolean;
   setOpenModal: (value: boolean) => void;
   product: Product;
+<<<<<<< HEAD
+=======
+  onSuccess: () => void;
+>>>>>>> master
 }
 
 const listGift = [
@@ -63,7 +70,12 @@ const listGift = [
 export default function OrderCustomize({
   openModal,
   setOpenModal,
+<<<<<<< HEAD
   product
+=======
+  product,
+  onSuccess
+>>>>>>> master
 }: TypeOrderCustomize) {
   const [formData, setFormData] = useState({
     name: '',
@@ -78,7 +90,10 @@ export default function OrderCustomize({
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [uploading, setUploading] = useState<boolean>(false);
   const { mutateAsync: createUpdateOrderCustom } = useCreateUpdateOrderCustom();
+<<<<<<< HEAD
   const { toast } = useToast();
+=======
+>>>>>>> master
 
   const handleUpdateQuantity = (type: 'decrease' | 'increase') => {
     setFormData((prev) => {
@@ -111,8 +126,11 @@ export default function OrderCustomize({
     }));
   };
 
+<<<<<<< HEAD
   console.log('Product:', product);
 
+=======
+>>>>>>> master
   const handleSubmit = async () => {
     try {
       const { name, phone, address, detailAddress, sizePicked, quantity } =
@@ -127,6 +145,7 @@ export default function OrderCustomize({
         status: 2,
         thumbnail: imageUrl
       };
+<<<<<<< HEAD
       await createUpdateOrderCustom(model);
       toast({
         variant: 'success',
@@ -149,6 +168,14 @@ export default function OrderCustomize({
       // setPreviewUrl(null);
       // setImageUrl(null);
       // setOpenModal(false);
+=======
+      const data = await createUpdateOrderCustom(model);
+      if (data) {
+        setOpenModal(false);
+        onSuccess();
+        window.location.href = '/profile';
+      }
+>>>>>>> master
     } catch (error) {
       console.error('Error submitting order:', error);
     }
@@ -251,10 +278,18 @@ export default function OrderCustomize({
                     {memoizedListSize.map((size) => (
                       <button
                         key={size}
+<<<<<<< HEAD
                         className={`h-9 w-9 rounded-md border text-muted-foreground ${formData.sizePicked === size
                           ? 'border-2.5 border-yellow text-primary'
                           : 'border-muted-foreground hover:border-primary hover:text-primary'
                           }`}
+=======
+                        className={`h-9 w-9 rounded-md border text-muted-foreground ${
+                          formData.sizePicked === size
+                            ? 'border-2.5 border-yellow text-primary'
+                            : 'border-muted-foreground hover:border-primary hover:text-primary'
+                        }`}
+>>>>>>> master
                         onClick={() =>
                           setFormData((prev) => ({ ...prev, sizePicked: size }))
                         }
@@ -392,12 +427,21 @@ export default function OrderCustomize({
             className="bg-yellow text-black"
             type="button"
             onClick={handleSubmit}
+<<<<<<< HEAD
           // disabled={
           //   !formData.name ||
           //   !formData.phone ||
           //   !formData.address ||
           //   !formData.detailAddress
           // }
+=======
+            // disabled={
+            //   !formData.name ||
+            //   !formData.phone ||
+            //   !formData.address ||
+            //   !formData.detailAddress
+            // }
+>>>>>>> master
           >
             Gửi đơn đặt hàng
           </Button>

@@ -12,8 +12,13 @@ export default function Footer() {
             <p className="mt-4">
               <ul className="flex flex-col gap-2">
                 <li className="flex">
+<<<<<<< HEAD
                   <Icons.mapPin className="mr-2 size-5" /> Địa chỉ : 1234 Street
                   Name, City Name
+=======
+                  <Icons.mapPin className="mr-2 size-5" /> Địa chỉ : FPT
+                  University, Q9 - TP.Hồ Chí Minh
+>>>>>>> master
                 </li>
                 <li className="flex">
                   <Icons.phone className="mr-2 size-5" /> Số điện thoại : 0941

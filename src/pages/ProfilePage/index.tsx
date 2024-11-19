@@ -83,12 +83,22 @@ export default function ProfilePage() {
             <div className="flex items-center gap-4">
               <Avatar>
                 <AvatarImage
+<<<<<<< HEAD
                   src="https://github.com/shadcn.png"
+=======
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+>>>>>>> master
                   alt="@shadcn"
                 />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
+<<<<<<< HEAD
               <h1 className="text-[20px] font-bold">Châu Nguyễn</h1>
+=======
+              <h1 className="text-[20px] font-bold">
+                {firstName} {lastName}
+              </h1>
+>>>>>>> master
             </div>
             {ListMenu.map((item) => {
               const Icon = Icons[item.icon || 'arrowRight'];

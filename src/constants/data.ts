@@ -25,6 +25,7 @@ export const navItems: NavItem[] = [
     icon: 'store',
     label: 'Store',
     color: '#1ba6f9'
+<<<<<<< HEAD
   },
   {
     title: 'Custom',
@@ -33,6 +34,8 @@ export const navItems: NavItem[] = [
     icon: 'crown',
     label: 'crown',
     color: '#f20e45'
+=======
+>>>>>>> master
   }
 ];
 

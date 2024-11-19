@@ -44,8 +44,13 @@ export default function HeaderNav({
   const [products, setProducts] = useState<ProductType[]>([]);
   const [isFocused, setIsFocused] = useState(false);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
+<<<<<<< HEAD
   const [pagingModel, setPagingModel] = useState(PagingModel);
   const { mutateAsync: searchShoes, data, isPending } = useSearchShoes();
+=======
+  const [pagingModel] = useState(PagingModel);
+  const { mutateAsync: searchShoes, isPending } = useSearchShoes();
+>>>>>>> master
   const auth = useSelector((state: RootState) => state.auth);
   const cart = useSelector((state: RootState) => state.cart.cartDetail);
   useEffect(() => {

@@ -95,3 +95,17 @@ export const useUpdateOrder = () => {
     }
   });
 };
+<<<<<<< HEAD
+=======
+
+export const useDeleteOrder = () => {
+  return useMutation({
+    mutationKey: ['delete_order'],
+    mutationFn: async (id: any) => {
+      return BaseRequest.Delete(
+        `/${SUB_URL}/delete-order-item-from-order/${id}`
+      );
+    }
+  });
+};
+>>>>>>> master

@@ -4,10 +4,16 @@ import Footer from '@/components/shared/footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useLogin } from '@/queries/auth.query';
+<<<<<<< HEAD
 import { useEffect, useLayoutEffect, useState } from 'react';
 import helper from '@/helpers/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
+=======
+import { useEffect, useState } from 'react';
+import helper from '@/helpers/index';
+import { useDispatch } from 'react-redux';
+>>>>>>> master
 import { login } from '@/redux/auth.slice';
 
 type FormLogin = {
@@ -24,6 +30,10 @@ export default function LoginPage() {
     password: ''
   });
   const [error, setError] = useState<FormError>({});
+<<<<<<< HEAD
+=======
+  const [generalError, setGeneralError] = useState<string | null>(null);
+>>>>>>> master
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -49,6 +59,10 @@ export default function LoginPage() {
   const handleLogin = async () => {
     const errors = validateInputs();
     setError(errors);
+<<<<<<< HEAD
+=======
+    setGeneralError(null);
+>>>>>>> master
 
     if (Object.keys(errors).length > 0) {
       return;
@@ -61,9 +75,17 @@ export default function LoginPage() {
         helper.cookie_set('AT', data.accessToken);
         dispatch(login());
         window.location.href = '/';
+<<<<<<< HEAD
       }
     } catch (err) {
       setError({ password: 'Tên đăng nhập hoặc mật khẩu không đúng.' });
+=======
+      } else {
+        setGeneralError('Tên đăng nhập hoặc mật khẩu không đúng.');
+      }
+    } catch (err) {
+      setGeneralError('Tên đăng nhập hoặc mật khẩu không đúng.');
+>>>>>>> master
     }
   };
 
@@ -104,6 +126,13 @@ export default function LoginPage() {
                 <p className="text-[12px] text-red">{error.password}</p>
               )}
 
+<<<<<<< HEAD
+=======
+              {generalError && ( // Hiển thị thông báo lỗi chung nếu có
+                <p className="text-[12px] text-red">{generalError}</p>
+              )}
+
+>>>>>>> master
               <p className="text-[12px] text-orange">Quên mật khẩu?</p>
               <div className="flex flex-col items-center gap-4">
                 <Button
